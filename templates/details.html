@@ -1,0 +1,28 @@
+
+
+<div id = "details">
+
+  
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col" ng-click = "customOrderBy('firstName')" class = "cursorP">First</th>
+      <th scope="col" ng-click = "customOrderBy('lastName')" class = "cursorP">Last</th>
+      <th scope="col" ng-click = "customOrderBy('email')" class = "cursorP">Email</th>
+      <th scope="col" ng-click = "customOrderBy('department')" class = "cursorP">Department</th>
+      <th scope="col" ng-click = "customOrderBy('Info')" class = "cursorP">About</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat= 'user in user.data | orderBy:fieldName:reverseSort'>
+      <th scope="row" >{{$index + 1}}</th>
+      <td >{{user.firstName}}</td>
+      <td >{{user.lastName}}</td>
+      <td >{{user.email}}</td>
+      <td >{{user.department}}</td>
+      <td>{{user.info}}</td>
+    </tr>
+  
+  </tbody>
+</table>
+</div>

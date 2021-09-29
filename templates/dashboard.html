@@ -1,0 +1,43 @@
+<div id="dashboard">
+  <!-- <div ng-show="switch">Please Log In To use Dashboard</div> -->
+
+  <!-- <div ng-show="!switch" >
+     -->
+   
+    <table class="table" >
+      <thead >
+        <tr>
+          <th scope="col">UserId</th>
+          <th scope="col">{{user["userId"]}}</th>
+         
+        </tr>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">{{user["firstName"]}}</th>
+           
+        </tr>
+        <tr>
+          <th scope="col">Last Name</th>
+          <th scope="col">{{user["lastName"]}}</th>
+           
+        </tr>
+        <tr>
+          <th scope="col">Department</th>
+          <th scope="col">{{user["department"]}}</th>
+           
+        </tr>
+        <tr>
+          <th scope="col">About</th>
+          <th scope="col">{{user["info"]}}</th>
+           <!-- <th scope="col"><input  type="text" ng-show = "isEditable" ng-model = "updateAbout" ng-value = "updateAbout" > -->
+           <!-- <button ng-click = "saveData()" ng-show = "isEditable">Save</button>
+           <button ng-click = "cancelData()" ng-show = "isEditable">Cancel</button> -->
+          </th>
+        </tr>
+      </thead>
+    </table>
+
+    <button class="btn btn-danger" ng-click="deleteAccount()">Delete Account</button>
+    <!-- <button class="btn btn-primary" ng-click="updateInfo()" >Update About</button> -->
+  </div>
+</div>

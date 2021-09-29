@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "logInApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "./angular.js"></script>
+    <script src = "./angular-route.min.js"></script>
+    <script type="module" src="./index_js.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./styles.css">
+    <title>LogIn Form</title>
+</head>
+<body >
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand" href="#">EmployeeR's</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#!logInForm" ng-show = "!loggedInUser" >LogIn </a>
+        <a class="nav-item nav-link" href="#!signUpForm" ng-show = "!loggedInUser">SignUp</a>
+        <a class="nav-item nav-link" href="#!dashboard" ng-show = "loggedInUser" >DashBoard</a>
+        <a class="nav-item nav-link " href="#!details" ng-click = "showDetails()" ng-show = "loggedInUser">Details</a>
+        <a class="nav-item nav-link " href="#!logOut"  ng-click = "loggedInUser = false" ng-show = "loggedInUser" >LogOut</a>
+
+      </div>
+    </div>
+  </nav>
+<!--   
+  <div class = "btn-flex">
+    <a class="btn btn-success mx-4" href="#!logInForm" ng-click = "showLogIn = true">LogIn</a>
+    <a class="btn btn-success mx-4" href = "#!signUpForm" >SignUP</a>
+    <a class="btn btn-success mx-4" href="#!dashboard">DashBoard</a>
+    <a class="btn btn-success mx-4" href="#!details">Details</a>
+    
+  </div> -->
+  
+  
+  <ng-view></ng-view>
+  
+  
+  
+  
+    
+</body>
+</html>

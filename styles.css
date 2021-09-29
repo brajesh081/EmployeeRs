@@ -1,0 +1,17 @@
+
+#logInForm,#dashboard,#details{
+    margin-top: 2rem;
+    background-color: #3598dc;
+}
+
+.btn-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cursorP{
+    cursor: pointer;
+}
+
+
