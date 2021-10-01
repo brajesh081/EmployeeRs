@@ -26,8 +26,8 @@ export default function ($scope,$rootScope, $http, $location) {
           console.log(res);
           $rootScope.loggedIn = true;
           $rootScope.user = res?.data?.user;
-          $location.url("/logInForm");
-          
+          $location.url("/dashboard");
+    
         }
       })
      
