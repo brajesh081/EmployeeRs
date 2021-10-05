@@ -33,7 +33,7 @@ export default function($rootScope ,$scope,$http,$location,loginProvider){
 
       $scope.fbLogin = function(){
         loginProvider.facebookSignIn().then((user) => {
-          let fbUser = {};
+          var fbUser = {};
           fbUser.firstName = user.displayName;
           fbUser.lastName = "lol";
           fbUser.email = user.email;

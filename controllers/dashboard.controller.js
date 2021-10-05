@@ -1,5 +1,4 @@
 export default function($scope,$rootScope,$location,$http){
-        console.log("in dashboard");
     $scope.switch = false;
     if($rootScope.loggedInUser === -1){
       $scope.switch = true;
@@ -8,7 +7,6 @@ export default function($scope,$rootScope,$location,$http){
     }
 
     $scope.deleteAccount = function (){
-      console.log("inside delete acc func");
       const id = $rootScope.user._id
       var userId = {id}
 

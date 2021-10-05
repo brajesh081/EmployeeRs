@@ -1,24 +1,22 @@
-export default  function($scope,$rootScope,$http){
+export default function ($scope, $http) {
+  $http({
+    method: "GET",
+    url: "https://employye-backend.herokuapp.com/api/b/employees",
+  })
+    .then((res) => {
+      console.log(res);
+      $scope.user = res;
+    })
+    .catch(() => {
+      alert("Something went wrong");
+    });
 
-  
-      $scope.showDetails = function (){
-      console.log("in sh D 1");
-      $http({
-        method: "GET",
-        url: "http://localhost:8000/api/students"
-      }).then((res) =>{
-        $scope.students = res;
-      })
-      .catch(() => {
-        console.log("some error occured!!!");
-      })
+  $scope.fieldName;
+  $scope.reverseSort = false;
 
-      console.log("in sh D 2");
-    }
-
-
-
-    
-    // console.log($rootScope);
-    }
-  
+  $scope.customOrderBy = function (name) {
+    $scope.reverseSort =
+      $scope.fieldName == name ? !$scope.reverseSort : false;
+    $scope.fieldName = name;
+  };
+}

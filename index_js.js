@@ -44,28 +44,7 @@ var app = angular
   .controller("logInController", loginController)
   .controller("signUpController", signupController)
   .controller("dashboardController", dashboardController)
-  .controller("detailsController", function ($scope, $http) {
-    $http({
-      method: "GET",
-      url: "https://employye-backend.herokuapp.com/api/b/employees",
-    })
-      .then((res) => {
-        console.log(res);
-        $scope.user = res;
-      })
-      .catch(() => {
-        alert("Something went wrong");
-      });
-
-    $scope.fieldName;
-    $scope.reverseSort = false;
-
-    $scope.customOrderBy = function (name) {
-      $scope.reverseSort =
-        $scope.fieldName == name ? !$scope.reverseSort : false;
-      $scope.fieldName = name;
-    };
-  })
+  .controller("detailsController", detailsController)
   .provider("loginProvider", [
     function () {
       this.$get = function ($http, $rootScope) {
@@ -99,5 +78,5 @@ var app = angular
           },
         };
       };
-    },
+    }
   ]);
