@@ -1,6 +1,6 @@
 // export default 
 angular.module("logInApp").controller("logInController", 
-function($rootScope ,$scope,$http,$location){
+function($rootScope ,$scope,$http,$location,loginProvider){
   
   $scope.login = function(){  
   var formData = {}
