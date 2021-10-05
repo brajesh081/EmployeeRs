@@ -1,4 +1,4 @@
-export default function ($scope,$rootScope, $http, $location) {
+angular.module("logInApp").controller("signUpController" , function ($scope,$rootScope, $http, $location) {
   $scope.signup = function () {
     console.log("in signup");
     var formData = {};
@@ -39,4 +39,4 @@ export default function ($scope,$rootScope, $http, $location) {
         }
       });
   };
-}
+})

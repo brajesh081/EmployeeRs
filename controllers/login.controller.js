@@ -1,4 +1,6 @@
-export default function($rootScope ,$scope,$http,$location,loginProvider){
+// export default 
+angular.module("logInApp").controller("logInController", 
+function($rootScope ,$scope,$http,$location){
   
   $scope.login = function(){  
   var formData = {}
@@ -75,5 +77,5 @@ export default function($rootScope ,$scope,$http,$location,loginProvider){
       }
 
   
-  }
+  })
 

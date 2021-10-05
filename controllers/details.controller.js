@@ -1,4 +1,5 @@
-export default function ($scope, $http) {
+angular.module("logInApp").controller("detailsController" ,function ($scope, $http) {
+  console.log("in details");
   $http({
     method: "GET",
     url: "https://employye-backend.herokuapp.com/api/b/employees",
@@ -19,4 +20,4 @@ export default function ($scope, $http) {
       $scope.fieldName == name ? !$scope.reverseSort : false;
     $scope.fieldName = name;
   };
-}
+})
