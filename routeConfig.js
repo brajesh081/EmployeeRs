@@ -38,6 +38,15 @@ export default function ($routeProvider) {
       }]
     }
   })
+  .when("/date" , {
+    templateUrl : "templates/dateTimeTemplate.html",
+    controller: "dateController",
+    resolve:{
+      lazyLoadCtrl : ['$ocLazyLoad',function ($ocLazyLoad) {
+        return $ocLazyLoad.load('dateCtrl')    
+  }]
+    }
+  })
   .otherwise({
     redirectTo: "/logInForm"
   })

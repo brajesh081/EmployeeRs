@@ -1,0 +1,16 @@
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  
+
+ <h1 align = "center">DateTime Picker</h1>  
+ <div class = "container" ng-show = "!dateSelected">  
+     <div class = "row">  
+       <div class = "col-sm-12" align = "center">   
+        <input ng-change = "printDate()" ng-model = "dateModel" type = "date" name = "date">  
+       </div>  
+         
+     </div>  
+   </div>  
+
+
+<div ng-bind = "::dateTime"></div>
